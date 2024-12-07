@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Software Architecture Notes | My Website</title>
+<meta name="keywords" content="">
+<meta name="description" content="Software Architecture ourse Materials
+Approaches to system development
+The Systems Development Life ycle (SDLC)
+
+
+Predictive Approach
+
+Waterfall model
+Planned in advance
+Understood and/or low technical risk requirements
+
+
+Adaptive Approach
+
+Iterative model
+Flexible and adapt to the change
+Uncertain and/or high technical risk requirements
+
+
+
+Adaptive oncepts
+
+
+Incremental Development
+
+completes portions of the system in increments
+partially deployed
+Gets part of working system into users’ hands sooner
+
+
+Walking Skeleton
+
+complete system structure is built early
+bare-bones functionality
+
+
+
+The Support Phase of the SDL
+
+in Predictive it is a ==project phase==
+In Adaptive it is ==separate project==">
+<meta name="author" content="">
+<link rel="canonical" href="//localhost:1313/posts/software_archirecrure/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="//localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="//localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="//localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="//localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="//localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="//localhost:1313/posts/software_archirecrure/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class=" dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="//localhost:1313/" accesskey="h" title="My Website (Alt + H)">My Website</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="//localhost:1313/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="//localhost:1313/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Software Architecture Notes
+    </h1>
+    <div class="post-meta"><span title='2024-07-12 00:00:00 +0000 UTC'>July 12, 2024</span>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#approaches-to-system-development" aria-label="Approaches to system development">Approaches to system development</a><ul>
+                        
+                <li>
+                    <a href="#the-systems-development-life-ycle-sdlc" aria-label="The Systems Development Life ycle (SDLC)">The Systems Development Life ycle (SDLC)</a><ul>
+                        
+                <li>
+                    <a href="#adaptive-oncepts" aria-label="Adaptive oncepts">Adaptive oncepts</a></li></ul>
+                </li>
+                <li>
+                    <a href="#the-support-phase-of-the-sdl" aria-label="The Support Phase of the SDL">The Support Phase of the SDL</a></li>
+                <li>
+                    <a href="#methodologies-models-tools-and-techniques" aria-label="Methodologies, Models, Tools and Techniques">Methodologies, Models, Tools and Techniques</a><ul>
+                        
+                <li>
+                    <a href="#approaches-to-software-onstruction-and-modeling" aria-label="Approaches to Software onstruction and Modeling">Approaches to Software onstruction and Modeling</a></li></ul>
+                </li>
+                <li>
+                    <a href="#agile-development" aria-label="Agile Development">Agile Development</a><ul>
+                        
+                <li>
+                    <a href="#scrum" aria-label="Scrum">Scrum</a></li></ul>
+                </li></ul>
+                </li>
+                <li>
+                    <a href="#diagrams" aria-label="Diagrams">Diagrams</a><ul>
+                        
+                <li>
+                    <a href="#use-ase-diagrams" aria-label="Use ase Diagrams">Use ase Diagrams</a></li>
+                <li>
+                    <a href="#activity-diagrams" aria-label="Activity Diagrams">Activity Diagrams</a></li>
+                <li>
+                    <a href="#system-sequence-diagrams-ssds" aria-label="System Sequence Diagrams (SSDs)">System Sequence Diagrams (SSDs)</a></li>
+                <li>
+                    <a href="#domain-model-lass-diagrams" aria-label="Domain Model lass Diagrams">Domain Model lass Diagrams</a></li>
+                <li>
+                    <a href="#state-machine-diagrams" aria-label="State Machine Diagrams">State Machine Diagrams</a></li></ul>
+                </li>
+                <li>
+                    <a href="#functional-and-non-functional" aria-label="Functional and Non-Functional">Functional and Non-Functional</a></li>
+                <li>
+                    <a href="#architectural-design" aria-label="Architectural Design">Architectural Design</a><ul>
+                        
+                <li>
+                    <a href="#architectural-styles" aria-label="Architectural Styles">Architectural Styles</a><ul>
+                        
+                <li>
+                    <a href="#1-repository-style" aria-label="1. Repository Style">1. Repository Style</a></li>
+                <li>
+                    <a href="#2-pipe-and-filter-style" aria-label="2. Pipe and Filter Style">2. Pipe and Filter Style</a></li>
+                <li>
+                    <a href="#3-object-oriented-style" aria-label="3. Object-Oriented Style">3. Object-Oriented Style</a></li>
+                <li>
+                    <a href="#4-layered-style" aria-label="4. Layered Style">4. Layered Style</a></li>
+                <li>
+                    <a href="#5-interpreter-style" aria-label="5. Interpreter Style">5. Interpreter Style</a></li>
+                <li>
+                    <a href="#6-process-ontrol-style" aria-label="6. Process-ontrol Style">6. Process-ontrol Style</a></li>
+                <li>
+                    <a href="#7-lient-server-style" aria-label="7. lient-Server Style">7. lient-Server Style</a></li>
+                <li>
+                    <a href="#8-implicit-invocation-style" aria-label="8. Implicit Invocation Style">8. Implicit Invocation Style</a></li>
+                <li>
+                    <a href="#9-peer-to-peer-p2p-style" aria-label="9. Peer-to-Peer (P2P) Style">9. Peer-to-Peer (P2P) Style</a></li>
+                <li>
+                    <a href="#10-monolithic-architecture" aria-label="10. Monolithic Architecture">10. Monolithic Architecture</a></li>
+                <li>
+                    <a href="#11-distributed-architecture" aria-label="11. Distributed Architecture">11. Distributed Architecture</a></li>
+                <li>
+                    <a href="#12-model-view-ontroller-mvc-architecture" aria-label="12. Model-View-ontroller (MVC) Architecture">12. Model-View-ontroller (MVC) Architecture</a></li></ul>
+                </li></ul>
+                </li>
+                <li>
+                    <a href="#prototyping-and-user-interface-ui" aria-label="Prototyping and User Interface (UI)">Prototyping and User Interface (UI)</a><ul>
+                        
+                <li>
+                    <a href="#hi-fi-high-fidelity" aria-label="Hi-Fi (High Fidelity)">Hi-Fi (High Fidelity)</a></li>
+                <li>
+                    <a href="#lo-fi-low-fidelity" aria-label="Lo-Fi (Low Fidelity)">Lo-Fi (Low Fidelity)</a></li>
+                <li>
+                    <a href="#rc-cards" aria-label="RC Cards">RC Cards</a></li>
+                <li>
+                    <a href="#architecture-of-an-application" aria-label="Architecture of an application">Architecture of an application</a></li></ul>
+                </li>
+                <li>
+                    <a href="#design-patterns" aria-label="Design Patterns">Design Patterns</a><ul>
+                        
+                <li>
+                    <a href="#what-is-a-design-pattern" aria-label="What is a Design Pattern?">What is a Design Pattern?</a></li>
+                <li>
+                    <a href="#design-patterns-types" aria-label="Design patterns Types">Design patterns Types</a><ul>
+                        
+                <li>
+                    <a href="#1-reational-patterns-object-creation" aria-label="1. reational Patterns (Object Creation)">1. reational Patterns (Object Creation)</a><ul>
+                        
+                <li>
+                    <a href="#1-singleton" aria-label="1. Singleton">1. Singleton</a></li>
+                <li>
+                    <a href="#2-typesafe-enum" aria-label="2. Typesafe Enum">2. Typesafe Enum</a></li>
+                <li>
+                    <a href="#3-abstract-factory" aria-label="3. Abstract Factory">3. Abstract Factory</a></li></ul>
+                </li>
+                <li>
+                    <a href="#2-structural-patterns-omposition" aria-label="2. Structural Patterns (omposition)">2. Structural Patterns (omposition)</a><ul>
+                        
+                <li>
+                    <a href="#1-adapter" aria-label="1. Adapter">1. Adapter</a></li>
+                <li>
+                    <a href="#2-proxy" aria-label="2. Proxy">2. Proxy</a></li>
+                <li>
+                    <a href="#3-decorators" aria-label="3. Decorators">3. Decorators</a></li></ul>
+                </li>
+                <li>
+                    <a href="#3-behavioral-patterns-interaction" aria-label="3. Behavioral Patterns (Interaction)">3. Behavioral Patterns (Interaction)</a><ul>
+                        
+                <li>
+                    <a href="#1-template" aria-label="1. Template">1. Template</a></li>
+                <li>
+                    <a href="#2-state" aria-label="2. State">2. State</a></li>
+                <li>
+                    <a href="#3-observer" aria-label="3. Observer">3. Observer</a></li></ul>
+                </li>
+                <li>
+                    <a href="#facade" aria-label="Facade">Facade</a></li>
+                <li>
+                    <a href="#mediator" aria-label="Mediator">Mediator</a></li>
+                <li>
+                    <a href="#model-view-ontroller-mvc" aria-label="Model-View-ontroller (MVC)">Model-View-ontroller (MVC)</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p><a href="https://my.cud.ac.ae/course/view.php?id=17512">Software Architecture ourse Materials</a></p>
+<h1 id="approaches-to-system-development">Approaches to system development<a hidden class="anchor" aria-hidden="true" href="#approaches-to-system-development">#</a></h1>
+<h2 id="the-systems-development-life-ycle-sdlc">The Systems Development Life ycle (SDLC)<a hidden class="anchor" aria-hidden="true" href="#the-systems-development-life-ycle-sdlc">#</a></h2>
+<hr>
+<ol>
+<li>Predictive Approach
+<ul>
+<li>Waterfall model</li>
+<li>Planned in advance</li>
+<li>Understood and/or low technical risk requirements</li>
+</ul>
+</li>
+<li>Adaptive Approach
+<ul>
+<li>Iterative model</li>
+<li>Flexible and adapt to the change</li>
+<li>Uncertain and/or high technical risk requirements</li>
+</ul>
+</li>
+</ol>
+<h3 id="adaptive-oncepts">Adaptive oncepts<a hidden class="anchor" aria-hidden="true" href="#adaptive-oncepts">#</a></h3>
+<hr>
+<ol>
+<li>Incremental Development
+<ul>
+<li>completes portions of the system in increments</li>
+<li>partially deployed</li>
+<li>Gets part of working system into users’ hands sooner</li>
+</ul>
+</li>
+<li>Walking Skeleton
+<ul>
+<li>complete system structure is built early</li>
+<li>bare-bones functionality</li>
+</ul>
+</li>
+</ol>
+<h2 id="the-support-phase-of-the-sdl">The Support Phase of the SDL<a hidden class="anchor" aria-hidden="true" href="#the-support-phase-of-the-sdl">#</a></h2>
+<hr>
+<p>in Predictive it is a ==project phase==
+In Adaptive it is ==separate project==</p>
+<ol>
+<li>Maintaining the system
+<ul>
+<li>Fix errors</li>
+<li>Make adjustments</li>
+<li>Update for changes</li>
+</ul>
+</li>
+<li>Enhancing the system
+<ul>
+<li>Add functionality</li>
+<li>hange functionality</li>
+</ul>
+</li>
+<li>Supporting the users
+<ul>
+<li>Ongoing user training</li>
+<li>Help desk</li>
+</ul>
+</li>
+</ol>
+<h2 id="methodologies-models-tools-and-techniques">Methodologies, Models, Tools and Techniques<a hidden class="anchor" aria-hidden="true" href="#methodologies-models-tools-and-techniques">#</a></h2>
+<hr>
+<ol>
+<li>Methodology
+<ul>
+<li>includes a collection of techniques, modeling and tools</li>
+</ul>
+</li>
+<li>Models
+<ul>
+<li>Abstraction</li>
+<li>Understanding complex concepts by focusing on relevant parts</li>
+<li>Each model shows different aspect</li>
+<li>rucial for communicating</li>
+</ul>
+</li>
+<li>Tools
+<ul>
+<li>Software applications that assists developers</li>
+</ul>
+</li>
+<li>Techniques
+<ul>
+<li>A collection of guidelines</li>
+</ul>
+</li>
+</ol>
+<h3 id="approaches-to-software-onstruction-and-modeling">Approaches to Software onstruction and Modeling<a hidden class="anchor" aria-hidden="true" href="#approaches-to-software-onstruction-and-modeling">#</a></h3>
+<hr>
+<ol>
+<li>Structured Approach
+<ul>
+<li>collection of processes</li>
+<li>Structured analysis, design and programming</li>
+</ul>
+</li>
+<li>Object-Oriented Approach
+<ul>
+<li>collection of objects</li>
+<li>OO Analysis (defining classes)</li>
+<li>OO Design (defining types of objects and how they interact)</li>
+<li>OO Programming (duh!!)</li>
+</ul>
+</li>
+</ol>
+<h2 id="agile-development">Agile Development<a hidden class="anchor" aria-hidden="true" href="#agile-development">#</a></h2>
+<hr>
+<ol>
+<li>Agile Manifesto (values)
+<ul>
+<li>==Responding to change== over following a plan.</li>
+<li>==Individuals and Interactions== over processes and tools.</li>
+<li>==Working software== over comprehensive documentation.</li>
+<li>==ustomer collaboration== over contract negotiation.</li>
+</ul>
+</li>
+<li>Agile Umbrella
+<ul>
+<li>Scrum</li>
+<li>Kanban</li>
+</ul>
+</li>
+</ol>
+<h3 id="scrum">Scrum<a hidden class="anchor" aria-hidden="true" href="#scrum">#</a></h3>
+<hr>
+<ol>
+<li>Split time into short fixed-length sprints (2-4 weeks)</li>
+<li>Optimize the release plan and update priorities with the customer</li>
+<li>Optimize the process by having retrospective after each iteration</li>
+</ol>
+<h1 id="diagrams">Diagrams<a hidden class="anchor" aria-hidden="true" href="#diagrams">#</a></h1>
+<h2 id="use-ase-diagrams">Use ase Diagrams<a hidden class="anchor" aria-hidden="true" href="#use-ase-diagrams">#</a></h2>
+<ul>
+<li><strong>Purpose:</strong>  Visually represent user interactions with the system (what the system does, not how).  Understandable by both technical and non-technical stakeholders.</li>
+<li><strong>Key Elements:</strong> Actors (users or external systems), Use ases (specific ways of using the system), System boundary.</li>
+<li><strong>Relationships:</strong>
+<ul>
+<li>Actor-Use ase:  Shows an actor&rsquo;s interaction with a use case.</li>
+<li>Use ase-Use Case:  <code>&lt;&lt;include&gt;&gt;</code> (one use case calls another reusable one), <code>&lt;&lt;extend&gt;&gt;</code> (one use case is a special case of another).</li>
+</ul>
+</li>
+<li><strong>Development Process:</strong> Identify actors, define their goals (use cases), describe the basic flow and alternative scenarios for each use case.</li>
+</ul>
+<h2 id="activity-diagrams">Activity Diagrams<a hidden class="anchor" aria-hidden="true" href="#activity-diagrams">#</a></h2>
+<ul>
+<li><strong>Purpose:</strong> Model workflows – sequences of activities to complete a business transaction.  Shows the flow of activities and decision points.</li>
+<li><strong>Key Elements:</strong> Activities (represented by rounded rectangles), decision points (diamonds), concurrent paths (split and merge synchronization bars).</li>
+<li><strong>Development Process:</strong> Identify agents (swimlanes), define activities, connect them with arrows to show the workflow.</li>
+</ul>
+<h2 id="system-sequence-diagrams-ssds">System Sequence Diagrams (SSDs)<a hidden class="anchor" aria-hidden="true" href="#system-sequence-diagrams-ssds">#</a></h2>
+<ul>
+<li><strong>Purpose:</strong> Show the interaction between an actor and the system as a whole (a single object representing the entire system).  Focuses on message passing.</li>
+<li><strong>Key Elements:</strong> Actor, :System, lifelines, messages (with parameters and return values), loops (*), optional/alternative paths ([ ]).</li>
+<li><strong>Development Process:</strong> Identify input messages from the actor, describe messages using verb-noun naming, identify conditions (loops, optionals), and describe output return values.</li>
+</ul>
+<h2 id="domain-model-lass-diagrams">Domain Model lass Diagrams<a hidden class="anchor" aria-hidden="true" href="#domain-model-lass-diagrams">#</a></h2>
+<ul>
+<li><strong>Purpose:</strong>  Model the objects and their relationships within the problem domain (without implementation details).</li>
+<li><strong>Key Elements:</strong> lasses (with attributes), associations (with multiplicity).</li>
+<li><strong>Notation:</strong> lass names capitalized, attribute names camelCase.</li>
+</ul>
+<h2 id="state-machine-diagrams">State Machine Diagrams<a hidden class="anchor" aria-hidden="true" href="#state-machine-diagrams">#</a></h2>
+<ul>
+<li><strong>Purpose:</strong> Model the life cycle of an object, showing its states and transitions between them.</li>
+<li><strong>Key Elements:</strong> States (conditions), transitions (movement between states), action expressions (activities performed during transitions), guard conditions (true/false tests for transitions), pseudo-states (start/end points), composite states (states containing other states), concurrent paths.</li>
+<li><strong>Development Process:</strong> Identify states, transitions, and associated elements, considering exception conditions and concurrent paths.</li>
+</ul>
+<h1 id="functional-and-non-functional">Functional and Non-Functional<a hidden class="anchor" aria-hidden="true" href="#functional-and-non-functional">#</a></h1>
+<p>==Software Requirements Specification (SRS)== is part of the Requirement Engineering phase, and it is a detailed document that describes both</p>
+<ul>
+<li>==Functional==: what the system should do.</li>
+<li>==Non-functional==: how the system should perform &ldquo;quality attributes&rdquo;.</li>
+<li>System architecture: High-level system design.
+NFRs examples:-</li>
+</ul>
+<ol>
+<li>Performance</li>
+<li>Availability</li>
+<li>Accuracy</li>
+<li>Portability</li>
+<li>Scalability</li>
+<li>Reuse-ability</li>
+<li>Maintainability</li>
+<li>Interoperability</li>
+<li>apacity</li>
+<li>Manageability</li>
+</ol>
+<h1 id="architectural-design">Architectural Design<a hidden class="anchor" aria-hidden="true" href="#architectural-design">#</a></h1>
+<h2 id="architectural-styles">Architectural Styles<a hidden class="anchor" aria-hidden="true" href="#architectural-styles">#</a></h2>
+<h3 id="1-repository-style">1. Repository Style<a hidden class="anchor" aria-hidden="true" href="#1-repository-style">#</a></h3>
+<ul>
+<li>
+<p><strong>Description:</strong>  A central data structure (the repository) is shared by independent components. omponents interact with the repository to read and modify data.  Suitable for applications needing a central body of information manipulated in various ways.</p>
+</li>
+<li>
+<p><strong>omponents:</strong> Central data structure, independent components operating on the data structure.</p>
+</li>
+<li>
+<p><strong>onnectors:</strong> Procedure calls or direct memory access.</p>
+</li>
+<li>
+<p><strong>Examples:</strong> Information systems, programming environments, graphical editors, AI knowledge bases, reverse engineering systems.</p>
+</li>
+<li>
+<p><strong>Advantages:</strong> Efficient data storage, centralized management (backup, security, concurrency control), shared data model.</p>
+</li>
+<li>
+<p><strong>Disadvantages:</strong> Requires a priori agreement on data model, difficult to distribute data, expensive data evolution.</p>
+</li>
+</ul>
+<h3 id="2-pipe-and-filter-style">2. Pipe and Filter Style<a hidden class="anchor" aria-hidden="true" href="#2-pipe-and-filter-style">#</a></h3>
+<ul>
+<li>
+<p><strong>Description:</strong> omponents (filters) process data streams, passing output to the input of the next filter. Suitable for applications requiring a series of independent computations on data.</p>
+</li>
+<li>
+<p><strong>omponents:</strong> Filters (perform local transformations).</p>
+</li>
+<li>
+<p><strong>onnectors:</strong> Pipes (transmit data streams).</p>
+</li>
+<li>
+<p><strong>Examples:</strong> Unix shell scripts, traditional compilers (lexical analysis, parsing, etc.).</p>
+</li>
+<li>
+<p><strong>Advantages:</strong> Easy to understand overall behavior, supports reuse, easy maintenance and enhancement, supports concurrency, allows specialized analysis (throughput, deadlock).</p>
+</li>
+<li>
+<p><strong>Disadvantages:</strong> Not suitable for interactive systems, excessive parsing/unparsing can lead to performance loss and increased complexity.</p>
+</li>
+</ul>
+<h3 id="3-object-oriented-style">3. Object-Oriented Style<a hidden class="anchor" aria-hidden="true" href="#3-object-oriented-style">#</a></h3>
+<ul>
+<li>
+<p><strong>Description:</strong> omponents (objects) encapsulate data and operations.  Objects interact through method invocations.  Suitable for applications where data protection and related bodies of information are central.</p>
+</li>
+<li>
+<p><strong>omponents:</strong> Objects.</p>
+</li>
+<li>
+<p><strong>onnectors:</strong> Function and procedure invocations (methods).</p>
+</li>
+<li>
+<p><strong>Examples:</strong>  Many modern applications.</p>
+</li>
+<li>
+<p><strong>Advantages:</strong> Data hiding allows implementation changes without affecting clients, supports design as collections of autonomous agents.</p>
+</li>
+<li>
+<p><strong>Disadvantages:</strong> Objects must know each other&rsquo;s identity, changing object identity requires modification of all invoking objects, side effects can be problematic.</p>
+</li>
+</ul>
+<h3 id="4-layered-style">4. Layered Style<a hidden class="anchor" aria-hidden="true" href="#4-layered-style">#</a></h3>
+<ul>
+<li>
+<p><strong>Description:</strong> omponents are organized into layers, each providing services to the layer above and acting as a client to the layer below.  Suitable for applications with distinct classes of services organized hierarchically.</p>
+</li>
+<li>
+<p><strong>omponents:</strong> Collections of procedures.</p>
+</li>
+<li>
+<p><strong>onnectors:</strong> Procedure calls with restricted visibility.</p>
+</li>
+<li>
+<p><strong>Examples:</strong> Layered communication protocols (ISO/OSI), operating systems (Unix).</p>
+</li>
+<li>
+<p><strong>Advantages:</strong> Increased abstraction, changes affect at most two layers, supports reuse of layer implementations.</p>
+</li>
+<li>
+<p><strong>Disadvantages:</strong> Not all systems are easily layered, performance requirements may force coupling of layers.</p>
+</li>
+</ul>
+<h3 id="5-interpreter-style">5. Interpreter Style<a hidden class="anchor" aria-hidden="true" href="#5-interpreter-style">#</a></h3>
+<ul>
+<li>
+<p><strong>Description:</strong> A component (interpreter) executes a program by interpreting instructions. Suitable when the appropriate language or machine for execution isn&rsquo;t directly available.</p>
+</li>
+<li>
+<p><strong>omponents:</strong> Execution engine state machine, program memory, program state memory.</p>
+</li>
+<li>
+<p><strong>onnectors:</strong> Procedure calls, direct memory access.</p>
+</li>
+<li>
+<p><strong>Examples:</strong> Programming language compilers (Java, Smalltalk), rule-based systems (Prolog), scripting languages (Awk, Perl).</p>
+</li>
+<li>
+<p><strong>Advantages:</strong> Simulates non-implemented hardware, facilitates portability.</p>
+</li>
+<li>
+<p><strong>Disadvantages:</strong> Extra indirection slows execution (though JIT compilers mitigate this).</p>
+</li>
+</ul>
+<h3 id="6-process-ontrol-style">6. Process-ontrol Style<a hidden class="anchor" aria-hidden="true" href="#6-process-ontrol-style">#</a></h3>
+<ul>
+<li>
+<p><strong>Description:</strong> Maintains specified properties of process outputs at given reference values.  Uses feedback loops to adjust process variables.</p>
+</li>
+<li>
+<p><strong>omponents:</strong> Process definition, control algorithm.</p>
+</li>
+<li>
+<p><strong>onnectors:</strong> Data flow relations (controlled, input, manipulated variables), set points, sensors.</p>
+</li>
+<li>
+<p><strong>Examples:</strong> Real-time systems (anti-lock brakes, nuclear power plants, cruise control).</p>
+</li>
+</ul>
+<h3 id="7-lient-server-style">7. lient-Server Style<a hidden class="anchor" aria-hidden="true" href="#7-lient-server-style">#</a></h3>
+<ul>
+<li>
+<p><strong>Description:</strong> omponents are clients requesting services from servers.  Suitable for distributed data and processing.</p>
+</li>
+<li>
+<p><strong>omponents:</strong> Servers (provide services), clients (request services).</p>
+</li>
+<li>
+<p><strong>onnectors:</strong> Network.</p>
+</li>
+<li>
+<p><strong>Examples:</strong> File servers, database servers, object servers.</p>
+</li>
+<li>
+<p><strong>Advantages:</strong> Straightforward data distribution, location transparency, heterogeneous platform support, easy to add/upgrade servers.</p>
+</li>
+<li>
+<p><strong>Disadvantages:</strong> Performance depends on network, complex design and implementation, service discovery can be challenging.</p>
+</li>
+</ul>
+<h3 id="8-implicit-invocation-style">8. Implicit Invocation Style<a hidden class="anchor" aria-hidden="true" href="#8-implicit-invocation-style">#</a></h3>
+<ul>
+<li>
+<p><strong>Description:</strong> omponents communicate through events.  A component announces an event, and other interested components respond.  Suitable for loosely-coupled, reconfigurable systems.</p>
+</li>
+<li>
+<p><strong>omponents:</strong> Event announcers, event listeners.</p>
+</li>
+<li>
+<p><strong>onnectors:</strong> Event broadcasting system.</p>
+</li>
+<li>
+<p><strong>Examples:</strong> Programming environments (debugger-editor interaction), database triggers, user interfaces.</p>
+</li>
+<li>
+<p><strong>Advantages:</strong> Strong reuse support, eases system evolution.</p>
+</li>
+<li>
+<p><strong>Disadvantages:</strong> Announcers lack control over responses, order and timing of responses are unpredictable.</p>
+</li>
+</ul>
+<h3 id="9-peer-to-peer-p2p-style">9. Peer-to-Peer (P2P) Style<a hidden class="anchor" aria-hidden="true" href="#9-peer-to-peer-p2p-style">#</a></h3>
+<ul>
+<li>
+<p><strong>Description:</strong> Each node (peer) acts as both client and server, sharing resources directly without relying on a central server.</p>
+</li>
+<li>
+<p><strong>Examples:</strong> File-sharing applications (BitTorrent), blockchain networks.</p>
+</li>
+</ul>
+<h3 id="10-monolithic-architecture">10. Monolithic Architecture<a hidden class="anchor" aria-hidden="true" href="#10-monolithic-architecture">#</a></h3>
+<ul>
+<li>
+<p><strong>Description:</strong> The entire application is developed and deployed as a single unit.</p>
+</li>
+<li>
+<p><strong>Examples:</strong> Traditional enterprise applications, legacy systems.</p>
+</li>
+</ul>
+<h3 id="11-distributed-architecture">11. Distributed Architecture<a hidden class="anchor" aria-hidden="true" href="#11-distributed-architecture">#</a></h3>
+<ul>
+<li>
+<p><strong>Description:</strong> System components are distributed across multiple networked locations.</p>
+</li>
+<li>
+<p><strong>Examples:</strong> Microservices, cloud computing, blockchain, content delivery networks (DNs).  This is a broad category encompassing many of the styles above.</p>
+</li>
+</ul>
+<h3 id="12-model-view-ontroller-mvc-architecture">12. Model-View-ontroller (MVC) Architecture<a hidden class="anchor" aria-hidden="true" href="#12-model-view-ontroller-mvc-architecture">#</a></h3>
+<ul>
+<li><strong>Description:</strong> Separates data (model), user interface (view), and user input handling (controller).</li>
+</ul>
+<p>This summary provides a high-level overview.  Each style has nuances and variations depending on the specific application and implementation.</p>
+<h1 id="prototyping-and-user-interface-ui">Prototyping and User Interface (UI)<a hidden class="anchor" aria-hidden="true" href="#prototyping-and-user-interface-ui">#</a></h1>
+<h2 id="hi-fi-high-fidelity">Hi-Fi (High Fidelity)<a hidden class="anchor" aria-hidden="true" href="#hi-fi-high-fidelity">#</a></h2>
+<p>As close as possible to the end product.</p>
+<h2 id="lo-fi-low-fidelity">Lo-Fi (Low Fidelity)<a hidden class="anchor" aria-hidden="true" href="#lo-fi-low-fidelity">#</a></h2>
+<p>Very simplified and intended only for the evaluation of design alternatives.
+Use:</p>
+<ol>
+<li>Paper, pencil, glue, transparencies&hellip;</li>
+<li>Define the scenario.
+Pros</li>
+<li>Very inexpensive in time and money.</li>
+<li>Rapid evaluation.</li>
+<li>Easily changed.</li>
+</ol>
+<h2 id="rc-cards">RC Cards<a hidden class="anchor" aria-hidden="true" href="#rc-cards">#</a></h2>
+<hr>
+<ul>
+<li>lass, Responsability, Cooperations</li>
+<li>identify classes of a system in a light way (paper / pencil)</li>
+<li>Responsibility-centered design rather than properties or methods
+!<img alt="Image Description" loading="lazy" src="/images/Pasted%20image%2020241206163551.png"></li>
+</ul>
+<h2 id="architecture-of-an-application">Architecture of an application<a hidden class="anchor" aria-hidden="true" href="#architecture-of-an-application">#</a></h2>
+<hr>
+<p>lass stereotypes BCE: indeicate the function of a class.&mdash;</p>
+<ul>
+<li>Boundary
+<ul>
+<li>UI of the app.</li>
+</ul>
+</li>
+<li>ontroller
+<ul>
+<li>control execution of actions of the app.</li>
+</ul>
+</li>
+<li>Entity
+<ul>
+<li>data managed by the system.
+!<img alt="Image Description" loading="lazy" src="/images/Pasted%20image%2020241206163535.png"></li>
+</ul>
+</li>
+</ul>
+<h1 id="design-patterns">Design Patterns<a hidden class="anchor" aria-hidden="true" href="#design-patterns">#</a></h1>
+<h2 id="what-is-a-design-pattern">What is a Design Pattern?<a hidden class="anchor" aria-hidden="true" href="#what-is-a-design-pattern">#</a></h2>
+<ul>
+<li>Is a common solution to a recurring problem in design.</li>
+<li>Abstracts a recurring design structure</li>
+<li>It has 4 parts:
+<ol>
+<li>Name</li>
+<li>Problem</li>
+<li>Solution</li>
+<li>onsequences</li>
+</ol>
+</li>
+<li>Language and implementation independent</li>
+<li>Micro-architecture</li>
+<li>Has existing methodologies (UML)</li>
+</ul>
+<hr>
+<p>Pattern VS Design</p>
+<ul>
+<li>Pattern provide a shared language for design</li>
+<li>Pattern captures design expertise</li>
+<li>Patterns make design concepts explicit</li>
+<li>Pattern can capture OO design principles within a specific domain</li>
+</ul>
+<hr>
+<p>Why Design Pattern?</p>
+<ul>
+<li>Designing OO software is hard so we reuse already made designs</li>
+</ul>
+<h2 id="design-patterns-types">Design patterns Types<a hidden class="anchor" aria-hidden="true" href="#design-patterns-types">#</a></h2>
+<h3 id="1-reational-patterns-object-creation">1. reational Patterns (Object Creation)<a hidden class="anchor" aria-hidden="true" href="#1-reational-patterns-object-creation">#</a></h3>
+<hr>
+<h4 id="1-singleton">1. Singleton<a hidden class="anchor" aria-hidden="true" href="#1-singleton">#</a></h4>
+<ul>
+<li>only one object per class</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">lassicSingleton</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> lassicSingleton instance <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> Object syncObject; <span style="color:#75715e">// to synchronize a block</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> <span style="color:#a6e22e">lassicSingleton</span>() {<span style="color:#75715e">/*exists only to defeat instantiation*/</span> };
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> lassicSingleton <span style="color:#a6e22e">getInstance</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">synchronized</span>(syncObject) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (instance <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>) instance <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> lassicSingleton();}
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> instance;}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="2-typesafe-enum">2. Typesafe Enum<a hidden class="anchor" aria-hidden="true" href="#2-typesafe-enum">#</a></h4>
+<ul>
+<li>fixed number of objects for each class</li>
+</ul>
+<h4 id="3-abstract-factory">3. Abstract Factory<a hidden class="anchor" aria-hidden="true" href="#3-abstract-factory">#</a></h4>
+<ul>
+<li>Interfaces</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">GardenMaker</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//Abstract Factory which returns one of three gardens</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Garden gd;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> Garden <span style="color:#a6e22e">getGarden</span>(String gtype) {
+</span></span><span style="display:flex;"><span>        gd <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> VegieGarden(); <span style="color:#75715e">//default</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(gtype.<span style="color:#a6e22e">equals</span>(<span style="color:#e6db74">&#34;Perennial&#34;</span>))
+</span></span><span style="display:flex;"><span>            gd <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PerennialGarden();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(gtype.<span style="color:#a6e22e">equals</span>(<span style="color:#e6db74">&#34;Annual&#34;</span>))
+</span></span><span style="display:flex;"><span>            gd <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> AnnualGarden();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> gd;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="2-structural-patterns-omposition">2. Structural Patterns (omposition)<a hidden class="anchor" aria-hidden="true" href="#2-structural-patterns-omposition">#</a></h3>
+<hr>
+<h4 id="1-adapter">1. Adapter<a hidden class="anchor" aria-hidden="true" href="#1-adapter">#</a></h4>
+<ul>
+<li>lets classes work together</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RoundToSquarePegAdapter</span> <span style="color:#66d9ef">extends</span> SquarePeg {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> RoundPeg roundPeg;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">RoundToSquarePegAdapter</span>(RoundPeg peg) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">roundPeg</span> <span style="color:#f92672">=</span> peg;}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">insert</span>(String str) {
+</span></span><span style="display:flex;"><span>        roundPeg.<span style="color:#a6e22e">insertIntoHole</span>(str);}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="2-proxy">2. Proxy<a hidden class="anchor" aria-hidden="true" href="#2-proxy">#</a></h4>
+<ul>
+<li>ontrol access to an object</li>
+</ul>
+<h4 id="3-decorators">3. Decorators<a hidden class="anchor" aria-hidden="true" href="#3-decorators">#</a></h4>
+<ul>
+<li>Add responsibilities dynamically</li>
+</ul>
+<h3 id="3-behavioral-patterns-interaction">3. Behavioral Patterns (Interaction)<a hidden class="anchor" aria-hidden="true" href="#3-behavioral-patterns-interaction">#</a></h3>
+<hr>
+<h4 id="1-template">1. Template<a hidden class="anchor" aria-hidden="true" href="#1-template">#</a></h4>
+<ul>
+<li>Skeleton of an algorithm</li>
+</ul>
+<h4 id="2-state">2. State<a hidden class="anchor" aria-hidden="true" href="#2-state">#</a></h4>
+<ul>
+<li>hange depending on state</li>
+</ul>
+<h4 id="3-observer">3. Observer<a hidden class="anchor" aria-hidden="true" href="#3-observer">#</a></h4>
+<ul>
+<li>One-to-many dependency to update automatically</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DigitallockView</span> <span style="color:#66d9ef">implements</span> Observer {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">update</span>(Observable obs, Object x) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//redraw my clock’s reading</span>
+</span></span><span style="display:flex;"><span>        draw();};
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span>(){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> hour <span style="color:#f92672">=</span> obs.<span style="color:#a6e22e">GetHour</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> minute <span style="color:#f92672">=</span> obs.<span style="color:#a6e22e">GetMinute</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> second <span style="color:#f92672">=</span> obs.<span style="color:#a6e22e">GetSecond</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// draw operation};</span>
+</span></span><span style="display:flex;"><span>    };
+</span></span></code></pre></div><hr>
+<h3 id="facade">Facade<a hidden class="anchor" aria-hidden="true" href="#facade">#</a></h3>
+<p>expose one API instead of a set of classes
+Pros:</p>
+<ul>
+<li>Simpler Interface</li>
+<li>Less Dependence (Weak coupling)</li>
+<li>Easier to change
+ons:</li>
+<li>Access to underlying classes</li>
+</ul>
+<hr>
+<h3 id="mediator">Mediator<a hidden class="anchor" aria-hidden="true" href="#mediator">#</a></h3>
+<p>one mediator to rule them all
+Pros:</p>
+<ul>
+<li>entral Control</li>
+<li>Easier ommunications</li>
+<li>Better reuseability
+ons:</li>
+<li>an be slower</li>
+<li>Single point of failure</li>
+<li>an get complicated</li>
+</ul>
+<hr>
+<h3 id="model-view-ontroller-mvc">Model-View-ontroller (MVC)<a hidden class="anchor" aria-hidden="true" href="#model-view-ontroller-mvc">#</a></h3>
+<ul>
+<li>Model (the core)</li>
+<li>ontroller</li>
+<li>View (display info)
+Pros:</li>
+<li>Decoupled</li>
+<li>Flexible and Reusable
+ons:</li>
+<li>omplex</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>
