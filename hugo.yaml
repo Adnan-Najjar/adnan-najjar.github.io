@@ -1,0 +1,29 @@
+baseURL: "localhost:1313"
+languageCode: en-us
+title: My Website
+theme: PaperMod
+
+params:
+  defaultTheme: dark
+  homeInfoParams:
+    Title: "Hi 🙃"
+    Content: >-
+      Welcome :)
+
+assets:
+  favicon16x16: /assets/favicon-16x16.png
+  favicon32x32: /assets/favicon-32x32.png
+  apple_touch_icon: /assets/apple-touch-icon.png
+
+favicon: favicon.ico
+
+menu:
+  main:
+  - identifier: home
+    name: Home
+    url: /
+    weight: 10
+  - identifier: posts
+    name: Posts
+    url: /posts/
+    weight: 20
