@@ -1,11 +1,10 @@
 ---
-title: Software Architecture
-date: 2024-12-10
-startTime: 15:30
-endTime: 17:30
-completed: 
-url: https://my.cud.ac.ae/course/view.php?id=17512
+title: "Software Architecture Notes"
+date: 2024-07-12
+draft: false
+ShowToc: true
 ---
+[Software Architecture Course Materials](https://my.cud.ac.ae/course/view.php?id=17512)
 # Approaches to system development
 ## The Systems Development Life Cycle (SDLC)
 ---
