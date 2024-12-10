@@ -4,9 +4,9 @@ date: 2024-07-12
 draft: false
 ShowToc: true
 ---
-[Software Architecture ourse Materials](https://my.cud.ac.ae/course/view.php?id=17512)
+[Software Architecture course Materials](https://my.cud.ac.ae/course/view.php?id=17512)
 # Approaches to system development
-## The Systems Development Life ycle (SDLC)
+## The Systems Development Life Cycle (SDLC)
 ---
 1. Predictive Approach
 	- Waterfall model
@@ -16,7 +16,7 @@ ShowToc: true
 	- Iterative model
 	- Flexible and adapt to the change
 	- Uncertain and/or high technical risk requirements
-### Adaptive oncepts
+### Adaptive Concepts
 ---
 1. Incremental Development
 	- completes portions of the system in increments
@@ -25,7 +25,7 @@ ShowToc: true
 2. Walking Skeleton
 	- complete system structure is built early
 	- bare-bones functionality
-## The Support Phase of the SDL
+## The Support Phase of the SDLC
 ---
 in Predictive it is a ==project phase==
 In Adaptive it is ==separate project==
@@ -35,7 +35,7 @@ In Adaptive it is ==separate project==
 	- Update for changes
 2. Enhancing the system
 	- Add functionality
-	- hange functionality
+	- Change functionality
 3. Supporting the users
 	- Ongoing user training
 	- Help desk
@@ -47,12 +47,12 @@ In Adaptive it is ==separate project==
 	- Abstraction
 	- Understanding complex concepts by focusing on relevant parts
 	- Each model shows different aspect
-	- rucial for communicating
+	- Crucial for communicating
 3. Tools
 	- Software applications that assists developers
 4. Techniques
 	- A collection of guidelines
-### Approaches to Software onstruction and Modeling
+### Approaches to Software Construction and Modeling
 ---
 1. Structured Approach
 	- collection of processes
@@ -68,7 +68,7 @@ In Adaptive it is ==separate project==
 	- ==Responding to change== over following a plan.
 	- ==Individuals and Interactions== over processes and tools.
 	- ==Working software== over comprehensive documentation.
-	- ==ustomer collaboration== over contract negotiation.
+	- ==Customer collaboration== over contract negotiation.
 2. Agile Umbrella
 	- Scrum
 	- Kanban
@@ -79,13 +79,13 @@ In Adaptive it is ==separate project==
 3. Optimize the process by having retrospective after each iteration
 
 # Diagrams
-## Use ase Diagrams
+## Use Case Diagrams
 
 * **Purpose:**  Visually represent user interactions with the system (what the system does, not how).  Understandable by both technical and non-technical stakeholders.
-* **Key Elements:** Actors (users or external systems), Use ases (specific ways of using the system), System boundary.
+* **Key Elements:** Actors (users or external systems), Use Cases (specific ways of using the system), System boundary.
 * **Relationships:**
-    * Actor-Use ase:  Shows an actor's interaction with a use case.
-    * Use ase-Use Case:  `<<include>>` (one use case calls another reusable one), `<<extend>>` (one use case is a special case of another).
+    * Actor-Use Case:  Shows an actor's interaction with a use case.
+    * Use Case-Use Case:  `<<include>>` (one use case calls another reusable one), `<<extend>>` (one use case is a special case of another).
 * **Development Process:** Identify actors, define their goals (use cases), describe the basic flow and alternative scenarios for each use case.
 
 ## Activity Diagrams
@@ -100,11 +100,11 @@ In Adaptive it is ==separate project==
 * **Key Elements:** Actor, :System, lifelines, messages (with parameters and return values), loops (*), optional/alternative paths ([ ]).
 * **Development Process:** Identify input messages from the actor, describe messages using verb-noun naming, identify conditions (loops, optionals), and describe output return values.
 
-## Domain Model lass Diagrams
+## Domain Model Class Diagrams
 
 * **Purpose:**  Model the objects and their relationships within the problem domain (without implementation details).
-* **Key Elements:** lasses (with attributes), associations (with multiplicity).
-* **Notation:** lass names capitalized, attribute names camelCase.
+* **Key Elements:** Classes (with attributes), associations (with multiplicity).
+* **Notation:** Class names capitalized, attribute names camelCase.
 
 ## State Machine Diagrams
 
@@ -127,7 +127,7 @@ NFRs examples:-
 6. Reuse-ability
 7. Maintainability
 8. Interoperability
-9. apacity
+9. Capacity
 10. Manageability
 
 # Architectural Design
@@ -135,10 +135,10 @@ NFRs examples:-
 
 ### 1. Repository Style
 
-* **Description:**  A central data structure (the repository) is shared by independent components. omponents interact with the repository to read and modify data.  Suitable for applications needing a central body of information manipulated in various ways.
+* **Description:**  A central data structure (the repository) is shared by independent components. Components interact with the repository to read and modify data.  Suitable for applications needing a central body of information manipulated in various ways.
 
-* **omponents:** Central data structure, independent components operating on the data structure.
-* **onnectors:** Procedure calls or direct memory access.
+* **Components:** Central data structure, independent components operating on the data structure.
+* **Connectors:** Procedure calls or direct memory access.
 * **Examples:** Information systems, programming environments, graphical editors, AI knowledge bases, reverse engineering systems.
 
 * **Advantages:** Efficient data storage, centralized management (backup, security, concurrency control), shared data model.
@@ -147,10 +147,10 @@ NFRs examples:-
 
 ### 2. Pipe and Filter Style
 
-* **Description:** omponents (filters) process data streams, passing output to the input of the next filter. Suitable for applications requiring a series of independent computations on data.
+* **Description:** Components (filters) process data streams, passing output to the input of the next filter. Suitable for applications requiring a series of independent computations on data.
 
-* **omponents:** Filters (perform local transformations).
-* **onnectors:** Pipes (transmit data streams).
+* **Components:** Filters (perform local transformations).
+* **Connectors:** Pipes (transmit data streams).
 * **Examples:** Unix shell scripts, traditional compilers (lexical analysis, parsing, etc.).
 
 * **Advantages:** Easy to understand overall behavior, supports reuse, easy maintenance and enhancement, supports concurrency, allows specialized analysis (throughput, deadlock).
@@ -159,10 +159,10 @@ NFRs examples:-
 
 ### 3. Object-Oriented Style
 
-* **Description:** omponents (objects) encapsulate data and operations.  Objects interact through method invocations.  Suitable for applications where data protection and related bodies of information are central.
+* **Description:** Components (objects) encapsulate data and operations.  Objects interact through method invocations.  Suitable for applications where data protection and related bodies of information are central.
 
-* **omponents:** Objects.
-* **onnectors:** Function and procedure invocations (methods).
+* **Components:** Objects.
+* **Connectors:** Function and procedure invocations (methods).
 * **Examples:**  Many modern applications.
 
 * **Advantages:** Data hiding allows implementation changes without affecting clients, supports design as collections of autonomous agents.
@@ -171,10 +171,10 @@ NFRs examples:-
 
 ### 4. Layered Style
 
-* **Description:** omponents are organized into layers, each providing services to the layer above and acting as a client to the layer below.  Suitable for applications with distinct classes of services organized hierarchically.
+* **Description:** Components are organized into layers, each providing services to the layer above and acting as a client to the layer below.  Suitable for applications with distinct classes of services organized hierarchically.
 
-* **omponents:** Collections of procedures.
-* **onnectors:** Procedure calls with restricted visibility.
+* **Components:** Collections of procedures.
+* **Connectors:** Procedure calls with restricted visibility.
 * **Examples:** Layered communication protocols (ISO/OSI), operating systems (Unix).
 
 * **Advantages:** Increased abstraction, changes affect at most two layers, supports reuse of layer implementations.
@@ -185,29 +185,29 @@ NFRs examples:-
 
 * **Description:** A component (interpreter) executes a program by interpreting instructions. Suitable when the appropriate language or machine for execution isn't directly available.
 
-* **omponents:** Execution engine state machine, program memory, program state memory.
-* **onnectors:** Procedure calls, direct memory access.
+* **Components:** Execution engine state machine, program memory, program state memory.
+* **Connectors:** Procedure calls, direct memory access.
 * **Examples:** Programming language compilers (Java, Smalltalk), rule-based systems (Prolog), scripting languages (Awk, Perl).
 
 * **Advantages:** Simulates non-implemented hardware, facilitates portability.
 * **Disadvantages:** Extra indirection slows execution (though JIT compilers mitigate this).
 
 
-### 6. Process-ontrol Style
+### 6. Process-Control Style
 
 * **Description:** Maintains specified properties of process outputs at given reference values.  Uses feedback loops to adjust process variables.
 
-* **omponents:** Process definition, control algorithm.
-* **onnectors:** Data flow relations (controlled, input, manipulated variables), set points, sensors.
+* **Components:** Process definition, control algorithm.
+* **Connectors:** Data flow relations (controlled, input, manipulated variables), set points, sensors.
 * **Examples:** Real-time systems (anti-lock brakes, nuclear power plants, cruise control).
 
 
-### 7. lient-Server Style
+### 7. Client-Server Style
 
-* **Description:** omponents are clients requesting services from servers.  Suitable for distributed data and processing.
+* **Description:** Components are clients requesting services from servers.  Suitable for distributed data and processing.
 
-* **omponents:** Servers (provide services), clients (request services).
-* **onnectors:** Network.
+* **Components:** Servers (provide services), clients (request services).
+* **Connectors:** Network.
 * **Examples:** File servers, database servers, object servers.
 
 * **Advantages:** Straightforward data distribution, location transparency, heterogeneous platform support, easy to add/upgrade servers.
@@ -216,10 +216,10 @@ NFRs examples:-
 
 ### 8. Implicit Invocation Style
 
-* **Description:** omponents communicate through events.  A component announces an event, and other interested components respond.  Suitable for loosely-coupled, reconfigurable systems.
+* **Description:** Components communicate through events.  A component announces an event, and other interested components respond.  Suitable for loosely-coupled, reconfigurable systems.
 
-* **omponents:** Event announcers, event listeners.
-* **onnectors:** Event broadcasting system.
+* **Components:** Event announcers, event listeners.
+* **Connectors:** Event broadcasting system.
 * **Examples:** Programming environments (debugger-editor interaction), database triggers, user interfaces.
 
 * **Advantages:** Strong reuse support, eases system evolution.
@@ -244,10 +244,10 @@ NFRs examples:-
 
 * **Description:** System components are distributed across multiple networked locations.
 
-* **Examples:** Microservices, cloud computing, blockchain, content delivery networks (DNs).  This is a broad category encompassing many of the styles above.
+* **Examples:** Microservices, cloud computing, blockchain, content delivery networks (CDNs).  This is a broad category encompassing many of the styles above.
 
 
-### 12. Model-View-ontroller (MVC) Architecture
+### 12. Model-View-Controller (MVC) Architecture
 
 * **Description:** Separates data (model), user interface (view), and user input handling (controller).
 
@@ -267,22 +267,22 @@ Pros
 2. Rapid evaluation.
 3. Easily changed.
 
-## RC Cards
+## CRC Cards
 ---
--  lass, Responsability, Cooperations
+-  Class, Responsability, Cooperations
 - identify classes of a system in a light way (paper / pencil)
 - Responsibility-centered design rather than properties or methods
-!![Image Description](/images/Pasted%20image%2020241206163551.png)
+![[Pasted image 20241206163551.png]]
 ## Architecture of an application
 ---
-lass stereotypes BCE: indeicate the function of a class.---
+Class stereotypes BCE: indeicate the function of a class.---
 - Boundary
 	- UI of the app.
-- ontroller
+- Controller
 	- control execution of actions of the app.
 - Entity
 	- data managed by the system.
-!![Image Description](/images/Pasted%20image%2020241206163535.png)
+![[Pasted image 20241206163535.png]]
 # Design Patterns
 ## What is a Design Pattern?
 - Is a common solution to a recurring problem in design.
@@ -291,7 +291,7 @@ lass stereotypes BCE: indeicate the function of a class.---
 	1. Name
 	2. Problem
 	3. Solution
-	4. onsequences
+	4. Consequences
 - Language and implementation independent
 - Micro-architecture
 - Has existing methodologies (UML)
@@ -305,18 +305,18 @@ Pattern VS Design
 Why Design Pattern?
 - Designing OO software is hard so we reuse already made designs
 ## Design patterns Types
-### 1. reational Patterns (Object Creation)
+### 1. Creational Patterns (Object Creation)
 ---
 #### 1. Singleton
 - only one object per class
 ```java
-public class lassicSingleton {
-    private static lassicSingleton instance = null;
+public class ClassicSingleton {
+    private static ClassicSingleton instance = null;
     private static Object syncObject; // to synchronize a block
-    protected lassicSingleton() {/*exists only to defeat instantiation*/ };
-    public static lassicSingleton getInstance() {
+    protected ClassicSingleton() {/*exists only to defeat instantiation*/ };
+    public static ClassicSingleton getInstance() {
         synchronized(syncObject) {
-            if (instance == null) instance = new lassicSingleton();}
+            if (instance == null) instance = new ClassicSingleton();}
         return instance;}
 }
 ```
@@ -338,7 +338,7 @@ class GardenMaker {
     }
 }
 ```
-### 2. Structural Patterns (omposition)
+### 2. Structural Patterns (Composition)
 ---
 #### 1. Adapter
 - lets classes work together
@@ -352,7 +352,7 @@ public class RoundToSquarePegAdapter extends SquarePeg {
 }
 ```
 #### 2. Proxy
-- ontrol access to an object
+- Control access to an object
 #### 3. Decorators
 - Add responsibilities dynamically
 ### 3. Behavioral Patterns (Interaction)
@@ -360,12 +360,12 @@ public class RoundToSquarePegAdapter extends SquarePeg {
 #### 1. Template
 - Skeleton of an algorithm
 #### 2. State
-- hange depending on state
+- Change depending on state
 #### 3. Observer
 - One-to-many dependency to update automatically
 
 ```java
-class DigitallockView implements Observer {
+class DigitalClockView implements Observer {
     public void update(Observable obs, Object x) {
         //redraw my clock’s reading
         draw();};
@@ -384,27 +384,27 @@ Pros:
 - Simpler Interface
 - Less Dependence (Weak coupling)
 - Easier to change
-ons:
+Cons:
 - Access to underlying classes
 ---
 ### Mediator
 one mediator to rule them all
 Pros:
-- entral Control
-- Easier ommunications
+- Central Control
+- Easier Communications
 - Better reuseability
-ons:
-- an be slower
+Cons:
+- Can be slower
 - Single point of failure
-- an get complicated
+- Can get complicated
 ---
-### Model-View-ontroller (MVC)
+### Model-View-Controller (MVC)
 - Model (the core)
-- ontroller
+- Controller
 - View (display info)
 Pros:
 - Decoupled
 - Flexible and Reusable
-ons:
-- omplex
+Cons:
+- Complex
 
