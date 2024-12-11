@@ -107,39 +107,36 @@ disp("The area is: " + x * sum );
 
 * MATLAB code:
 ```matlab
-syms x
-f_given = input("Is f(x) given? (y/n): ", 's');
+%% Function given
 
-if strcmpi(f_given, 'y')
-	f(x) = input("Enter function: ");
-	range = input("Enter the range: ");
-	n = input("Enter the number of segments: ");
+f(x) = input("Enter function: ");
+range = input("Enter the range: ");
+n = input("Enter the number of segments: ");
 
-	x = (range(end) - range(1)) / (n);
-	interval = range(1):x:range(end);
-	sum = double(f(range(1))) + double(f(range(end)));
-	
-	for i = 2:(length(interval)-1)
-		sum = sum + 2 * double(f(interval(i)));
-	end
-	
-	disp("The area using the Trapezoid Method is: " + round((x/2) * sum));
-	
-	else
-		f = input("Enter all values of array f(x): ");
-		lower_bound = input("Enter the lower bound of the range: ");
-		upper_bound = input("Enter the upper bound of the range: ");
-		n = input("Enter the number of segments: ");
+x = (range(end) - range(1)) / (n);
+interval = range(1):x:range(end);
+sum = double(f(range(1))) + double(f(range(end)));
 
-		x = (upper_bound - lower_bound) / n;
-		sum = double(f(1)) + double(f(end));
-
-		for k = 2:(length(f)-1)
-			sum = sum + 2 * double(f(k));
-		end
-	
-	disp("Area using Trapezoid Method without equation is: " + (x/2) * sum);
+for i = 2:(length(interval)-1)
+	sum = sum + 2 * double(f(interval(i)));
 end
+
+disp("The area using the Trapezoid Method is: " + round((x/2) * sum));
+
+%% Function not given
+f = input("Enter all values of array f(x): ");
+lower_bound = input("Enter the lower bound of the range: ");
+upper_bound = input("Enter the upper bound of the range: ");
+n = input("Enter the number of segments: ");
+
+x = (upper_bound - lower_bound) / n;
+sum = double(f(1)) + double(f(end));
+
+for k = 2:(length(f)-1)
+	sum = sum + 2 * double(f(k));
+end
+
+disp("Area using Trapezoid Method without equation is: " + (x/2) * sum);
 
 %% Easy version
 f = input("Enter function: ");
@@ -175,12 +172,24 @@ disp(integral);
 
 ## Linear Least Squares Regression
 * Fitting a straight line to data.
-* a1 = m = ()
-* a0 = ^y - a1 \^x
 * Coefficient of determination (R<sup>2</sup>) and standard error of the estimate.
 * Interpretation of R<sup>2</sup> and correlation coefficient (r).
-* MATLAB implementation using `polyfit` and `polyval`.
-* Error analysis (total standard deviation, standard error).
+```matlab
+x = [1, 2, 3, 4, 7, 5, 6, 7];
+y = [0.5, 2.5, 2, 4, 3.5, 6, 5.5];
+
+p = polyfit(x,y,1);
+a1 = p(1);
+a0 = p(2);
+
+regression_line = polyval(p, x);
+
+residuals = y - regression_line;
+SSR = sum(residuals.^2);
+SST = sum((y - mean(y))."2);
+
+R_squared = 1 - SSR/SST
+```
 
 ## Linearization of Nonlinear Relationships
 * Transforming nonlinear equations into linear forms (exponential, power).
