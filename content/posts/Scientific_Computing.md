@@ -76,6 +76,8 @@ disp(X);
 A = [1,2,3;4,5,6;7,8,9];
 LT = chol(A);
 L = transpose(LT)
+Y = inv(L)*B;
+X = inv(trans(T))*Y;
 ```
 
 ---
