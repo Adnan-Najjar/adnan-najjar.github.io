@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "4a24bdc0fc3e559c",
+        "id": "3e45268be0f79397",
         "type": "tabs",
         "children": [
           {
-            "id": "88a562365d969548",
+            "id": "ea811e37f8db2ded",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/Scientific_Computing.md",
+                "file": "content/posts/OS.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "Scientific_Computing"
+              "title": "OS"
             }
           }
         ]
@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 204.5086555480957,
-    "collapsed": true
+    "width": 204.5086555480957
   },
   "right": {
     "id": "ab14bcbb6c3f2452",
@@ -163,8 +162,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "88a562365d969548",
+  "active": "ea811e37f8db2ded",
   "lastOpenFiles": [
+    "content/posts/OS.md",
     "content/posts/Software_Archirecrure.md",
     "content/posts/Scientific_Computing.md"
   ]
