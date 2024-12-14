@@ -6,54 +6,24 @@
     <description>Recent content on My Website</description>
     <generator>Hugo -- 0.139.3</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 12 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Software Architecture Notes</title>
-      <link>//localhost:1313/posts/software_archirecrure/</link>
-      <pubDate>Fri, 12 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/software_archirecrure/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://my.cud.ac.ae/course/view.php?id=17512&#34;&gt;Software Architecture ourse Materials&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&#34;approaches-to-system-development&#34;&gt;Approaches to system development&lt;/h1&gt;
-&lt;h2 id=&#34;the-systems-development-life-ycle-sdlc&#34;&gt;The Systems Development Life ycle (SDLC)&lt;/h2&gt;
-&lt;hr&gt;
-&lt;ol&gt;
-&lt;li&gt;Predictive Approach
+      <title>Operating Systems Notes</title>
+      <link>//localhost:1313/posts/os/</link>
+      <pubDate>Sat, 14 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/os/</guid>
+      <description>&lt;h2 id=&#34;exam-answers-based-on-provided-powerpoints&#34;&gt;Exam Answers (Based on Provided PowerPoints)&lt;/h2&gt;
+&lt;p&gt;Here are answers to your exam questions, referencing the provided PowerPoint slides where applicable.  Note that some questions require more context than the slides provide, and the answers reflect that limitation.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Part 1: Synchronization&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. What makes any synchronization algorithm a &amp;ldquo;good&amp;rdquo; one?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A good synchronization algorithm must satisfy three conditions (Slide 5.11):&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Waterfall model&lt;/li&gt;
-&lt;li&gt;Planned in advance&lt;/li&gt;
-&lt;li&gt;Understood and/or low technical risk requirements&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mutual Exclusion:&lt;/strong&gt; Only one process can be in its critical section at a time.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Progress:&lt;/strong&gt; If no process is in its critical section and some processes wish to enter, only those &lt;em&gt;not&lt;/em&gt; in their remainder sections can participate in deciding which will enter next.  This decision cannot be postponed indefinitely.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bounded Waiting:&lt;/strong&gt; There is a limit on the number of times other processes can enter their critical sections after a process has made a request to enter its own critical section, before that request is granted.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Adaptive Approach
-&lt;ul&gt;
-&lt;li&gt;Iterative model&lt;/li&gt;
-&lt;li&gt;Flexible and adapt to the change&lt;/li&gt;
-&lt;li&gt;Uncertain and/or high technical risk requirements&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;adaptive-oncepts&#34;&gt;Adaptive oncepts&lt;/h3&gt;
-&lt;hr&gt;
-&lt;ol&gt;
-&lt;li&gt;Incremental Development
-&lt;ul&gt;
-&lt;li&gt;completes portions of the system in increments&lt;/li&gt;
-&lt;li&gt;partially deployed&lt;/li&gt;
-&lt;li&gt;Gets part of working system into users’ hands sooner&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Walking Skeleton
-&lt;ul&gt;
-&lt;li&gt;complete system structure is built early&lt;/li&gt;
-&lt;li&gt;bare-bones functionality&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;the-support-phase-of-the-sdl&#34;&gt;The Support Phase of the SDL&lt;/h2&gt;
-&lt;hr&gt;
-&lt;p&gt;in Predictive it is a ==project phase==
-In Adaptive it is ==separate project==&lt;/p&gt;</description>
+&lt;p&gt;&lt;strong&gt;Part 2: Deadlocks&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

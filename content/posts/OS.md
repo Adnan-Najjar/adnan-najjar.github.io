@@ -1,6 +1,6 @@
 ---
 title: "Operating Systems Notes"
-date: 2024-14-12
+date: 2024-12-14
 draft: false
 ShowToc: false
 ---

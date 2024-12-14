@@ -162,8 +162,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ea811e37f8db2ded",
+  "active": "dd3db13f1356bab8",
   "lastOpenFiles": [
+    "public/posts/os/index.html",
+    "public/posts/os",
     "content/posts/OS.md",
     "content/posts/Software_Archirecrure.md",
     "content/posts/Scientific_Computing.md"
