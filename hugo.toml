@@ -93,7 +93,7 @@ What excites me most about cybersecurity is the blend of problem-solving and the
     [params.about.skills]
     enable = true
     title = "Here are a some technologies I've been working with recently:"
-    items = [ "Python", "Java", "C", "Go", "bash" ]
+    items = [ "Python", "Java", "Go", "bash" ]
 
   [params.experience]
   enable = false
@@ -123,8 +123,21 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. [example org.](https://
   index = true
 
     [[params.education.items]]
+    title = "Google Cybersecurity Certificate"
+    date = "Nov 2024 - Jan 2025"
+
+      [params.education.items.school]
+      name = "Coursera"
+      url = "https://coursera.org"
+
+      [params.education.items.featuredLink]
+      enable = true
+      name = "My certificate"
+      url = "https://coursera.org/share/0120e9a3edb06c2712a5637512111fe9"
+
+    [[params.education.items]]
     title = "Bachelor of Science in Cyber Security"
-    date = "2022 - 2026"
+    date = "Aug 2022 - In Progress"
     GPA = "3.65 out of 4.0"
     content = """"""
 
@@ -138,35 +151,25 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. [example org.](https://
       url = "https://example.com"
 
   [params.certifications]
-  enable = true
+  enable = false
 
     [[params.certifications.items]]
-    title = "Google Cybersecurity Certificate"
-    # content = ""
-    url = "https://example.com"
-    # image = "/images/achievment.jpg"
+    title = ""
+    url = ""
+    image = ""
 
   [params.projects]
   enable = true
 
     [[params.projects.items]]
-    title = "Hugo site"
-    content = "This site :)"
-    image = "https://www.datocms-assets.com/205/1516783640-hugo.svg?fit=max&fm=jpg&w=1000"
-    badges = [ "Hugo" ]
-
-      [params.projects.items.featured]
-      name = "Demo"
-      link = "https://adnan-najjar.github.io"
-
-      [[params.projects.items.links]]
-      icon = "fab fa-github"
-      url = "https://github.com/adnan-najjar/adnan-najjar.github.io"
-
-    [[params.projects.items]]
     title = "Organize PDF"
     content = "A simple script to organize pdfs in multiple folders based on their content, utilizing multi-threading of parallel command."
+    image = ""
     badges = [ "Bash" ]
+
+      # [params.projects.items.featured]
+      # name = "Demo"
+      # link = "https://adnan-najjar.github.io"
 
       [[params.projects.items.links]]
       icon = "fab fa-github"
