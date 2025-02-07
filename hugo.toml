@@ -52,10 +52,10 @@ animate = true
 
   [params.hero]
   enable = true
-  backgroundImage = "https://www.ncsc.gov.uk/images/Annual-Review-2022-Threats-Risks-Vulnerabilities-image.jpg"
+  backgroundImage = "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   intro = "Hi, my name is"
   title = "Adnan."
-  subtitle = "I break things to fix them."
+  # subtitle = "I break things to fix them."
 
     [params.hero.button]
     enable = false
@@ -79,21 +79,17 @@ url = "https://www.linkedin.com/in/adnan-najjar-9b302a306"
   [params.about]
   enable = true
   title = "About Me"
-  image = "https://media.licdn.com/dms/image/v2/D4D03AQEmKJXbFU2jfw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718312829317?e=1740614400&v=beta&t=5Vxdoctb8iTGCG7zSOcOeo1lrKOM-rwMsFEPvhop-QU"
+  image = "https://media.licdn.com/dms/image/v2/D4D03AQEQ7rZmS7HzZA/profile-displayphoto-shrink_800_800/B4DZVJCsP_GcAc-/0/1740687197957?e=1753920000&v=beta&t=YLBe1agMtHeMqoYuJjy916tefsBm8l6-0mn2pG1bF7A"
   content = """
-Hi, I’m Adnan, and I’m passionate about protecting privacy in our digital world. I’m currently on the lookout for a cybersecurity analyst position where I can make a difference. I love tackling complex problems and working with technology, using my programming skills to create practical solutions.
+I am a cybersecurity student who is excited about learning how to protect information from digital threats. I enjoy exploring malware and understanding how to keep systems safe. 
 
-I’m good at managing my time, which helps me prioritize tasks and stay organized. My programming background allows me to build tools and scripts that enhance efficiency in cybersecurity efforts. I also enjoy problem-solving, which helps me navigate challenges effectively.
-
-I believe in the importance of following laws and regulations to keep organizations compliant with industry standards. Continuous learning is a priority for me, as I want to stay updated on the latest threats and technologies.
-
-What excites me most about cybersecurity is the blend of problem-solving and the opportunity to help people protect their privacy. I’m eager to connect with cybersecurity recruiters and hiring managers at technology firms and government agencies, and I look forward to contributing to their security goals.
+I am eager to learn more about threat detection and security measures. I look forward to connecting with others in the cybersecurity field and sharing ideas!
 """
 
     [params.about.skills]
     enable = true
     title = "Here are a some technologies I've been working with recently:"
-    items = [ "Python", "Java", "C", "Go", "bash" ]
+    items = [ "Python", "Java", "Go", "bash" ]
 
   [params.experience]
   enable = false
@@ -123,8 +119,34 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. [example org.](https://
   index = true
 
     [[params.education.items]]
+    title = "Google Cybersecurity Certificate"
+    date = "Nov 2024 - Jan 2025"
+
+      [params.education.items.school]
+      name = "Coursera"
+      url = "https://coursera.org"
+
+      [params.education.items.featuredLink]
+      enable = true
+      name = "My certificate"
+      url = "https://coursera.org/share/0120e9a3edb06c2712a5637512111fe9"
+
+    [[params.education.items]]
+    title = "Nomu Al Ghurair - Cybersecurity"
+    date = "Nov 2024 - Jan 2025"
+
+      [params.education.items.school]
+      name = "Spritns"
+      url = "https://sprints.ai"
+
+      [params.education.items.featuredLink]
+      enable = true
+      name = "My certificate"
+      url = "https://sprints.ai/en/journeys/learning/ID%20-%20SPR%20-%20NL6Q29/view-certificate-serial"
+
+    [[params.education.items]]
     title = "Bachelor of Science in Cyber Security"
-    date = "2022 - 2026"
+    date = "Aug 2022 - In Progress"
     GPA = "3.65 out of 4.0"
     content = """"""
 
@@ -135,42 +157,42 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. [example org.](https://
       [params.education.items.featuredLink]
       enable = true
       name = "My academic record"
-      url = "https://example.com"
+      url = "https://cud.ac.ae"
 
   [params.certifications]
-  enable = true
+  enable = false
 
     [[params.certifications.items]]
-    title = "Google Cybersecurity Certificate"
-    # content = ""
-    url = "https://example.com"
-    # image = "/images/achievment.jpg"
+    title = ""
+    url = ""
+    image = ""
 
   [params.projects]
   enable = true
 
     [[params.projects.items]]
-    title = "Hugo site"
-    content = "This site :)"
-    image = "https://www.datocms-assets.com/205/1516783640-hugo.svg?fit=max&fm=jpg&w=1000"
-    badges = [ "Hugo" ]
-
-      [params.projects.items.featured]
-      name = "Demo"
-      link = "https://adnan-najjar.github.io"
-
-      [[params.projects.items.links]]
-      icon = "fab fa-github"
-      url = "https://github.com/adnan-najjar/adnan-najjar.github.io"
-
-    [[params.projects.items]]
     title = "Organize PDF"
     content = "A simple script to organize pdfs in multiple folders based on their content, utilizing multi-threading of parallel command."
+    image = ""
     badges = [ "Bash" ]
+
+      # [params.projects.items.featured]
+      # name = "Demo"
+      # link = "https://adnan-najjar.github.io"
 
       [[params.projects.items.links]]
       icon = "fab fa-github"
       url = "https://github.com/adnan-najjar/organize_pdfs"
+
+    [[params.projects.items]]
+    title = "Ansible Personal Config"
+    content = "An ansible playbook to configure and setup my fedora linux machine"
+    image = "https://upload.wikimedia.org/wikipedia/commons/2/24/Ansible_logo.svg"
+    badges = [ "ansible" ]
+
+      [[params.projects.items.links]]
+      icon = "fab fa-github"
+      url = "https://github.com/adnan-najjar/ansible_personal_config"
 
   [params.contact]
   enable = false
