@@ -2,7 +2,6 @@ baseURL = "adnan-najjar.github.io"
 languageCode = "en-us"
 title = "Adnan Najjar"
 theme = "hugo-profile"
-Paginate = 3
 enableRobotsTXT = false
 
 [outputs]
