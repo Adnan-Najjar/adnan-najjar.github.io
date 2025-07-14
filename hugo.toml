@@ -2,7 +2,6 @@ baseURL = "adnan-najjar.github.io"
 languageCode = "en-us"
 title = "Adnan Najjar"
 theme = "hugo-profile"
-Paginate = 3
 enableRobotsTXT = false
 
 [outputs]
@@ -146,8 +145,8 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. [example org.](https://
 
     [[params.education.items]]
     title = "Bachelor of Science in Cyber Security"
-    date = "Aug 2022 - In Progress"
-    GPA = "3.65 out of 4.0"
+    date = "Aug 2022 - May 2026"
+    GPA = "3.61 out of 4.0"
     content = """"""
 
       [params.education.items.school]
@@ -171,10 +170,10 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. [example org.](https://
   enable = true
 
     [[params.projects.items]]
-    title = "Organize PDF"
-    content = "A simple script to organize pdfs in multiple folders based on their content, utilizing multi-threading of parallel command."
+    title = "AgentShell"
+    content = "AI-powered SSH honeypot that simulates a Linux shell with LLM-backed command responses."
     image = ""
-    badges = [ "Bash" ]
+    badges = [ "Python", "SIEM", "LLM" ]
 
       # [params.projects.items.featured]
       # name = "Demo"
@@ -182,7 +181,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. [example org.](https://
 
       [[params.projects.items.links]]
       icon = "fab fa-github"
-      url = "https://github.com/adnan-najjar/organize_pdfs"
+      url = "https://github.com/adnan-najjar/agentshell"
 
     [[params.projects.items]]
     title = "Ansible Personal Config"
